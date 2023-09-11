@@ -431,3 +431,11 @@
 {"level":"info","message":"Request received: method---GET ::::: route---/","timestamp":"2023-09-11T13:48:56.941Z"}
 {"level":"info","message":"Request received: method---GET ::::: route---/api","timestamp":"2023-09-11T13:49:02.296Z"}
 {"level":"info","message":"Request received: method---GET ::::: route---/api?slack_name=example_name&track=backend","timestamp":"2023-09-11T13:49:27.799Z"}
+{"level":"info","message":"Server Started Successfully","timestamp":"2023-09-11T13:53:31.057Z"}
+{"level":"info","message":"Server Started Successfully","timestamp":"2023-09-11T13:53:31.099Z"}
+{"level":"info","message":"Server Started Successfully","timestamp":"2023-09-11T13:53:31.079Z"}
+{"level":"info","message":"Server Started Successfully","timestamp":"2023-09-11T13:53:31.193Z"}
+{"level":"info","message":"Request received: method---GET ::::: route---/api","timestamp":"2023-09-11T13:53:35.628Z"}
+{"level":"info","message":"Request received: method---GET ::::: route---/api?track=frontend&slack_name=Ayomide%20Ishola","timestamp":"2023-09-11T13:54:26.465Z"}
+{"level":"info","message":"Request received: method---GET ::::: route---/api?track=frontend&slack_name=Ayomide","timestamp":"2023-09-11T13:54:33.928Z"}
+{"level":"info","message":"Request received: method---GET ::::: route---/api?slack_name=example_name&track=backend","timestamp":"2023-09-11T13:54:52.846Z"}

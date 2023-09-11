@@ -4,7 +4,7 @@ require('dotenv').config()
 const config = {
     APP_NAME: "hng-task-one",
     domain: {
-        URL: 'https://hng-task-one.com'
+        URL: 'https://hng-task-one-o5um.onrender.com'
     },
     roles: {
         USER: ["user", "admin"],
