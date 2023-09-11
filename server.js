@@ -21,9 +21,6 @@ if (cluster.isMaster) {
     app.use(require('./src/routes'))
     
     app.listen(3000, () => {
-      // Initialize mongoDB connection
-    //   require('./src/database/mongo')
-        
       logger.info(`Server Started Successfully`);
     })
     
