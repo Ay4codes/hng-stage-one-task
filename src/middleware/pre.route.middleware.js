@@ -13,7 +13,7 @@ const helmetConfig = require('./helmetConfig');
 const customError = require('../utils/custom-error');
 
 const corsOptions = {
-    origin: [domain.API, domain.WEB], // List of allowed origins
+    origin: [domain.URL], // List of allowed origins
     methods: 'GET', // Only allowed request according to the task given
     allowedHeaders: 'Content-Type,Authorization',
 };

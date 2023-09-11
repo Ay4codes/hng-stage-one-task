@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const userCtrl = require("../controllers/userCtrl");
+const apiRoutes = require('./api.routes')
 
-router.get("/", userCtrl.home);
+router.use("/api", apiRoutes);
 
 module.exports = router;

@@ -4,8 +4,7 @@ require('dotenv').config()
 const config = {
     APP_NAME: "hng-task-one",
     domain: {
-        API: 'https://api.hng-task-one.com',
-        WEB: 'https://hng-task-one.com'
+        URL: 'https://hng-task-one.com'
     },
     roles: {
         USER: ["user", "admin"],
