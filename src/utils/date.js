@@ -53,25 +53,28 @@ class timeZone {
         return "Invalid day number";
     }
 
-    // UTC time with +/-2 validation
+    // UTC time with +/-2 validation --->>> My Func
     getCurrentUTC() {
-        const currentUTC = new Date().toUTCString();
-
+        const currentUTC = new Date();
+      
+        // Validation range (+/-2 hours)
         const validationRangeInHours = 2;
-
-        // Create date objects for the upper and lower bounds of the validation range
-        const lowerBound = new Date(currentUTC);
-        lowerBound.setUTCHours(lowerBound.getUTCHours() - validationRangeInHours);
-        const upperBound = new Date(currentUTC);
-        upperBound.setUTCHours(upperBound.getUTCHours() + validationRangeInHours);
-
-        // Get the current UTC time within the validation range
-        const currentUTCWithinRange = new Date(Math.min(Math.max(new Date(currentUTC), lowerBound), upperBound));
-
-        return currentUTCWithinRange.toISOString();
+      
+        // Calculate the lower and upper bounds of the validation range
+        const lowerBound = new Date(currentUTC.getTime() - validationRangeInHours * 60 * 60 * 1000);
+        const upperBound = new Date(currentUTC.getTime() + validationRangeInHours * 60 * 60 * 1000);
+      
+        // Get the current UTC time within the validation range and format it as needed
+        const currentUTCWithinRange = new Date(Math.min(Math.max(currentUTC, lowerBound), upperBound));
+        const formattedUTC = currentUTCWithinRange.toISOString();
+      
+        // Remove milliseconds from the formatted timestamp
+        const formattedUTCWithoutMilliseconds = formattedUTC.replace(/\.\d{3}Z$/, 'Z');
+      
+        return formattedUTCWithoutMilliseconds;
     }
 
-    // Used this because the server utc time is 15sec slower to the grader requirement
+    // With Luxon
     getCurrentUtcWithLuxon() {
         const utcTime = DateTime.utc();
         return utcTime.toISO({ includeMillis: true });
